@@ -8,50 +8,80 @@
     <link rel="stylesheet" href="https://unpkg.com/7.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+
   <body>
 
-  <div class="row">
-    <div class="column">
+    <div class="row">
+      <div class="column">
 
-      <div class="window" style="margin: 36px; width: 250px">
-        <div class="title-bar">
-          <div class="title-bar-text">Arman's Zone</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+        <div class="window" style="margin: 36px; width: 250px">
+          <div class="title-bar">
+            <div class="title-bar-text">Arman's Zone</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body has-space">
+            <p> Hello, I'm Arman Mohammadi.<br>This is my professional site.</p>
           </div>
         </div>
-        <div class="window-body has-space">
-          <p> Hello, I'm Arman Mohammadi.<br>This is my professional site.</p>
-        </div>
-      </div>
 
-      <div class="window" style="margin: 36px; width: 200px">
-        <div class="title-bar">
-          <div class="title-bar-text">Contact</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+        <div class="window" style="margin: 36px; width: 200px">
+          <div class="title-bar">
+            <div class="title-bar-text">Contact</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body has-space">
+            <p>
+              <a href="https://www.linkedin.com/in/raha-mohammadi-77031119a/">LinkedIn</a><br>
+              <a href="https://github.com/r-mohammadi1">Github</a><br>
+              <a href="mailto:mohammar@protonmail.com">Personal Email</a><br>
+              <a href="mailto:mohammar@purdue.edu">School Email</a><br>
+            </p>
+            <section class="field-row">
+              <button class="default"><a href="resume.pdf" download="resume">Download Resume</a></button>
+            </section>
           </div>
         </div>
-        <div class="window-body has-space">
-          <p>
-            <a href="https://www.linkedin.com/in/raha-mohammadi-77031119a/">LinkedIn</a><br>
-            <a href="https://github.com/r-mohammadi1">Github</a><br>
-            <a href="mailto:mohammar@protonmail.com">Personal Email</a><br>
-            <a href="mailto:mohammar@purdue.edu">School Email</a><br>
-          </p>
-          <section class="field-row">
-            <button class="default"><a href="resume.pdf" download="resume">Download Resume</a></button>
-          </section>
-        </div>
+
       </div>
 
-    </div>
-
-    <div class="column">
+      <div class="column">
 
         <div class="window" style="margin: 36px; width: 500px">
           <div class="title-bar">
@@ -91,7 +121,7 @@
             </div>
           </div>
           <div class="window-body has-space">
-            <p> 
+            <p>
               Site written in HTML5. <br>
               Site protected with <a href="https://site.spawning.ai/spawning-ai-txt">ai.txt</a> <br>
               Stylesheet is <a href="https://khang-nd.github.io/7.css/">7.css</a> by Khang Nguyen Duy. <br>
